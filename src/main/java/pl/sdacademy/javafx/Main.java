@@ -61,4 +61,20 @@ public class Main extends Application {
         }
 
     }
+    public void loadPersonEdit(){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/PersonEdit.fxml"));
+            VBox window = (VBox) loader.load();
+
+            Stage editStage = new Stage();
+            editStage.setTitle("edytuj osobę");
+            Scene scene = new Scene(window);
+            editStage.setScene(scene);
+            editStage.show();
+        }
+        catch (IOException err){
+            err.printStackTrace();
+        }
+    }
 }
