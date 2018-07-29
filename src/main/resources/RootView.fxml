@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="pl.sdacademy.javafx.controller.PersonController" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -69,10 +69,10 @@
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
-                        <TableView prefHeight="369.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="personTable" prefHeight="369.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
-                            <TableColumn prefWidth="91.0" text="Imię" />
-                            <TableColumn prefWidth="94.0" text="Nazwisko" />
+                            <TableColumn fx:id="firstNameCol" prefWidth="91.0" text="Imię" />
+                            <TableColumn fx:id="lastNameCol" prefWidth="94.0" text="Nazwisko" />
                           </columns>
                         </TableView>
                      </children>
@@ -99,12 +99,12 @@
                               <Label text="Miasto" GridPane.rowIndex="3" />
                               <Label text="Kod pocztowy" GridPane.rowIndex="4" />
                               <Label text="Numer telefonu" GridPane.rowIndex="5" />
-                              <Label text="Label" GridPane.columnIndex="1" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="Label" fx:id="firstNamelabel" GridPane.columnIndex="1" />
+                              <Label text="Label" fx:id="lastNamelabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Label" fx:id="streetlabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Label" fx:id="citylabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Label" fx:id="postalCodelabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="Label" fx:id="telephonelabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                            </children>
                         </GridPane>
                         <Label layoutX="44.0" layoutY="14.0" text="Szczegóły pracownika" />
